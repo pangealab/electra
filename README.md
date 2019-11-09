@@ -1,2 +1,4 @@
-# electra
-Swagger API for ServiceNow using NodeJS
+![Intro](./docs/now-cli-swagger.png)
+
+Swagger API for ServiceNow using NodeJS. The Now Platform already provides various REST APIs, which are active by default. These APIs provide the 
+ability to interact with various ServiceNow functionality within your application. Such functionality includes the ability to perform create, read, update, and delete (CRUD) operations on existing tables (Table API), insert data into, retrieve information from, and run transforms against a MetricBase database (MetricBase Time Series API, and many others. This project explores using Swagger to document the CLI specific API and the data model used in API calls.
