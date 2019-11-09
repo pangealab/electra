@@ -28,7 +28,7 @@ app.use('/users', usersRouter);
 
 // Swagger Route
 swaggerDocument = require('./api/swagger.json');
-app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument,options));
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
