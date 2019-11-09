@@ -7,6 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// Dotenv module
+require('dotenv').config()
+
 // Swagger Route
 var swaggerUi = require('swagger-ui-express');
 
