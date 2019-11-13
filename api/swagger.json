@@ -1,39 +1,38 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.",
+    "description": "This is a pre-production ServiceNow Command Line (CLI) API. Clich [here](https://docs.servicenow.com/integrate/inbound_rest/concept/c_RESTAPI.html) for a full list of production API's.",
     "version": "1.0.0",
-    "title": "Swagger Petstore",
+    "title": "ServiceNow CLI API",
     "termsOfService": "http://swagger.io/terms/",
     "contact": {
-      "email": "apiteam@swagger.io"
+      "email": "anthonyangelo@servicenow.com"
     },
     "license": {
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "petstore.swagger.io",
-  "basePath": "/v2",
+  "basePath": "/api/docs",
   "tags": [
     {
-      "name": "pet",
-      "description": "Everything about your Pets",
+      "name": "incident",
+      "description": "Manage Incidents",
       "externalDocs": {
         "description": "Find out more",
-        "url": "http://swagger.io"
+        "url": "https://www.servicenow.com"
       }
     },
     {
-      "name": "store",
-      "description": "Access to Petstore orders"
+      "name": "event",
+      "description": "Manage Events"
     },
     {
-      "name": "user",
-      "description": "Operations about user",
+      "name": "service",
+      "description": "Manage Service",
       "externalDocs": {
-        "description": "Find out more about our store",
-        "url": "http://swagger.io"
+        "description": "Find out more about ServiceNow.com",
+        "url": "https://www.servicenow.com"
       }
     }
   ],
@@ -45,7 +44,7 @@
     "/pet": {
       "post": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "Add a new pet to the store",
         "description": "",
@@ -85,7 +84,7 @@
       },
       "put": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "Update an existing pet",
         "description": "",
@@ -133,7 +132,7 @@
     "/pet/findByStatus": {
       "get": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "Finds Pets by status",
         "description": "Multiple status values can be provided with comma separated strings",
@@ -188,7 +187,7 @@
     "/pet/findByTags": {
       "get": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "Finds Pets by tags",
         "description": "Muliple tags can be provided with comma separated strings. Use         tag1, tag2, tag3 for testing.",
@@ -238,7 +237,7 @@
     "/pet/{petId}": {
       "get": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "Find pet by ID",
         "description": "Returns a single pet",
@@ -279,7 +278,7 @@
       },
       "post": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "Updates a pet in the store with form data",
         "description": "",
@@ -331,7 +330,7 @@
       },
       "delete": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "Deletes a pet",
         "description": "",
@@ -377,7 +376,7 @@
     "/pet/{petId}/uploadImage": {
       "post": {
         "tags": [
-          "pet"
+          "incident"
         ],
         "summary": "uploads an image",
         "description": "",
@@ -433,7 +432,7 @@
     "/store/inventory": {
       "get": {
         "tags": [
-          "store"
+          "event"
         ],
         "summary": "Returns pet inventories by status",
         "description": "Returns a map of status codes to quantities",
@@ -464,7 +463,7 @@
     "/store/order": {
       "post": {
         "tags": [
-          "store"
+          "event"
         ],
         "summary": "Place an order for a pet",
         "description": "",
@@ -500,7 +499,7 @@
     "/store/order/{orderId}": {
       "get": {
         "tags": [
-          "store"
+          "event"
         ],
         "summary": "Find purchase order by ID",
         "description": "For valid response try integer IDs with value >= 1 and <= 10.         Other values will generated exceptions",
@@ -538,7 +537,7 @@
       },
       "delete": {
         "tags": [
-          "store"
+          "event"
         ],
         "summary": "Delete purchase order by ID",
         "description": "For valid response try integer IDs with positive integer value.         Negative or non-integer values will generate API errors",
@@ -571,7 +570,7 @@
     "/user": {
       "post": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Create user",
         "description": "This can only be done by the logged in user.",
@@ -601,7 +600,7 @@
     "/user/createWithArray": {
       "post": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Creates list of users with given input array",
         "description": "",
@@ -634,7 +633,7 @@
     "/user/createWithList": {
       "post": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Creates list of users with given input array",
         "description": "",
@@ -667,7 +666,7 @@
     "/user/login": {
       "get": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Logs user into the system",
         "description": "",
@@ -720,7 +719,7 @@
     "/user/logout": {
       "get": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Logs out current logged in user session",
         "description": "",
@@ -740,7 +739,7 @@
     "/user/{username}": {
       "get": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Get user by user name",
         "description": "",
@@ -775,7 +774,7 @@
       },
       "put": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Updated user",
         "description": "This can only be done by the logged in user.",
@@ -813,7 +812,7 @@
       },
       "delete": {
         "tags": [
-          "user"
+          "service"
         ],
         "summary": "Delete user",
         "description": "This can only be done by the logged in user.",
@@ -1030,7 +1029,7 @@
     }
   },
   "externalDocs": {
-    "description": "Find out more about Swagger",
-    "url": "http://swagger.io"
+    "description": "Find out more about ServiceNow",
+    "url": "https://www.servicenow.com"
   }
 }
