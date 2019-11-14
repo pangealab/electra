@@ -190,34 +190,6 @@
     }
   },
   "definitions": {
-    "Event": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "petId": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "quantity": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "shipDate": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "complete": {
-          "type": "boolean",
-          "default": false
-        }
-      },
-      "xml": {
-        "name": "Event"
-      }
-    },
     "Service": {
       "type": "object",
       "properties": {
@@ -248,6 +220,69 @@
         "name": "Service"
       }
     },
+    "Event": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Event Source"
+        },
+        "node": {
+          "type": "string",
+          "description": "Event Node"
+        },
+        "type": {
+          "type": "string",
+          "description": "Event Type"
+        },
+        "resource": {
+          "type": "string",
+          "description": "Event Resource"
+        },
+        "metricName": {
+          "type": "string",
+          "description": "Event Metric Name"
+        },      
+        "sourceInstance": {
+          "type": "string",
+          "description": "Event Source Instance"
+        },
+        "messageKey": {
+          "type": "string",
+          "description": "Event Message Key"
+        },
+        "severity": {
+          "type": "string",
+          "description": "Event Severity",
+          "enum": [
+            "critical",
+            "major",
+            "minor",
+            "warning",
+            "info",
+            "clear"
+          ]
+        },
+        "resolutionState": {
+          "type": "string",
+          "description": "Event Resolution State",
+          "enum": [
+            "new"
+          ]
+        },   
+        "timeOfEvent": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string",
+          "description": "Event Description"
+        }
+      },
+      "xml": {
+        "name": "Event"
+      }
+    },    
     "Incident": {
       "type": "object",
       "required": [
