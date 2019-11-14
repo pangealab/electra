@@ -112,14 +112,14 @@
         }
       }
     },
-    "/close/incident": {
+    "/resolve/incident": {
       "put": {
         "tags": [
           "incident"
         ],
-        "summary": "Close an existing Incident",
+        "summary": "Resolve an existing Incident",
         "description": "",
-        "operationId": "closeIncident",
+        "operationId": "resolveIncident",
         "consumes": [
           "application/json"
         ],
@@ -130,7 +130,7 @@
           {
             "in": "body",
             "name": "body",
-            "description": "Incident that needs to be closed",
+            "description": "Incident that needs to be resolved",
             "required": true,
             "schema": {
               "$ref": "#/definitions/Incident"
@@ -251,26 +251,25 @@
     "Incident": {
       "type": "object",
       "required": [
-        "name",
-        "photoUrls"
+        "number",
+        "resolution",
+        "notes"
       ],
       "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "name": {
+        "number": {
           "type": "string",
-          "example": "doggie"
+          "example": "INC0400001"
         },
-        "status": {
+        "resolution": {
           "type": "string",
-          "description": "pet status in the store",
+          "description": "Resolution Code",
           "enum": [
-            "available",
-            "pending",
-            "sold"
+            "solved"
           ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Resolution Notes"
         }
       },
       "xml": {
