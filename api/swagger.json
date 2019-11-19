@@ -147,7 +147,8 @@
           "405": {
             "description": "Validation exception"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/create/event": {
@@ -185,7 +186,8 @@
           "400": {
             "description": "Invalid Event"
           }
-        }
+        },
+        "deprecated": true
       }
     }
   },
