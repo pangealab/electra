@@ -211,60 +211,46 @@
     "Event": {
       "type": "object",
       "properties": {
-        "source": {
+        "title": {
           "type": "string",
-          "description": "Event Source"
+          "description": "Alert Title"
         },
-        "node": {
+        "ruleId": {
           "type": "string",
-          "description": "Event Node"
+          "description": "Alert Rule"
         },
-        "type": {
+        "ruleName": {
           "type": "string",
-          "description": "Event Type"
+          "description": "Alert Rule Name"
         },
-        "resource": {
-          "type": "string",
-          "description": "Event Resource"
-        },
-        "metricName": {
-          "type": "string",
-          "description": "Event Metric Name"
-        },      
-        "sourceInstance": {
-          "type": "string",
-          "description": "Event Source Instance"
-        },
-        "messageKey": {
-          "type": "string",
-          "description": "Event Message Key"
-        },
-        "severity": {
+        "state": {
           "type": "string",
           "description": "Event Severity",
           "enum": [
-            "critical",
-            "major",
-            "minor",
-            "warning",
-            "info",
-            "clear"
+            "ok",
+            "paused",
+            "alerting",
+            "pending",
+            "no_data"
           ]
         },
-        "resolutionState": {
+        "imageUrl": {
           "type": "string",
-          "description": "Event Resolution State",
-          "enum": [
-            "new"
-          ]
-        },   
-        "timeOfEvent": {
+          "description": "Alert Image URL"
+        },      
+        "message": {
           "type": "string",
-          "format": "date-time"
+          "description": "Alert Message"
         },
-        "description": {
-          "type": "string",
-          "description": "Event Description"
+        "evalMatches": {
+          "type": "array",
+          "xml": {
+            "name": "tag",
+            "wrapped": true
+          },
+          "items": {
+            "$ref": "#/definitions/Metric"
+          }
         }
       },
       "xml": {
@@ -299,6 +285,37 @@
         "name": "Incident"
       }
     },
+    "Metric": {
+      "type": "object",
+      "properties": {
+        "metric": {
+          "type": "string",
+          "description": "Metric Name"
+        },
+        "tags": {
+          "$ref": "#/definitions/Tag"
+        },
+        "value": {
+          "type": "string",
+          "description": "Metric Value"
+        }
+      }
+    },
+    "Tag": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Tag"
+      }
+    },  
     "ApiResponse": {
       "type": "object",
       "properties": {
