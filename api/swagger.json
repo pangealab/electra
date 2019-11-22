@@ -293,11 +293,7 @@
           "description": "Metric Name"
         },
         "tags": {
-          "type": "array",
-          "xml": {
-            "name": "tag",
-            "wrapped": true
-          },
+          "type": "object",
           "items": {
             "$ref": "#/definitions/Tag"
           }
@@ -310,16 +306,8 @@
     },
     "Tag": {
       "type": "object",
-      "properties": {
-        "key": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
-      },
-      "xml": {
-        "name": "Tag"
+      "additionalProperties": {
+        "type": "string"
       }
     },  
     "ApiResponse": {
