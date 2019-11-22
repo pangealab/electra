@@ -304,10 +304,10 @@
     "Tag": {
       "type": "object",
       "properties": {
-        "id": {
+        "key": {
           "type": "string"
         },
-        "name": {
+        "value": {
           "type": "string"
         }
       },
