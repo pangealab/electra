@@ -293,7 +293,14 @@
           "description": "Metric Name"
         },
         "tags": {
-          "$ref": "#/definitions/Tag"
+          "type": "array",
+          "xml": {
+            "name": "tag",
+            "wrapped": true
+          },
+          "items": {
+            "$ref": "#/definitions/Tag"
+          }
         },
         "value": {
           "type": "string",
