@@ -186,7 +186,7 @@
           "400": {
             "description": "Invalid Event"
           }
-        },
+        }
       }
     }
   },
