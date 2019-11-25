@@ -223,6 +223,10 @@
           "type": "string",
           "description": "Alert Rule Name"
         },
+        "ruleUrl": {
+          "type": "string",
+          "description": "Alert Rule URL"
+        },        
         "state": {
           "type": "string",
           "description": "Event Severity",
