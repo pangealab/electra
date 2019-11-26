@@ -196,8 +196,14 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Service Name"
+          "description": "Service Name",
+          "example": "eurex-derivatives"
         },
+        "parent": {
+          "type": "string",
+          "description": "Parent Service Name",
+          "example": "Fidelity-SAP-Hana"
+        },        
         "host": {
           "type": "string",
           "description": "Service Host FQDN",
