@@ -45,7 +45,7 @@
     "http"
   ],
   "paths": {
-    "/register/service": {
+    "/register/v1/service": {
       "post": {
         "tags": [
           "service"
@@ -77,7 +77,7 @@
         }
       }
     },
-    "/register/services": {
+    "/register/v1/services": {
       "post": {
         "tags": [
           "service"
@@ -112,7 +112,7 @@
         }
       }
     },
-    "/resolve/incident": {
+    "/resolve/v1/incident": {
       "put": {
         "tags": [
           "incident"
@@ -151,7 +151,7 @@
         "deprecated": true
       }
     },
-    "/create/event": {
+    "/create/v1/event": {
       "post": {
         "tags": [
           "event"
