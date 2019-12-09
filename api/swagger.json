@@ -98,9 +98,8 @@
             "description": "List of Services object",
             "required": true,
             "schema": {
-              "type": "array",
               "items": {
-                "$ref": "#/definitions/Service"
+                "$ref": "#/definitions/Services"
               }
             }
           }
@@ -118,7 +117,7 @@
           "incident"
         ],
         "summary": "Resolve an existing Incident",
-        "description": "",
+        "description": "Resolve an existing Incident",
         "operationId": "resolveIncident",
         "consumes": [
           "application/json"
@@ -199,19 +198,62 @@
           "description": "Service Name",
           "example": "eurex-derivatives"
         },
-        "parent": {
-          "type": "string",
-          "description": "Parent Service Name",
-          "example": "Fidelity-SAP-Hana"
-        },        
         "host": {
           "type": "string",
           "description": "Service Host FQDN",
-          "example": "http://foo.com/api/v1/bar"
+          "example": "foo.com"
         }
       },
       "xml": {
         "name": "Service"
+      }
+    },
+    "Services": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Business Service Name",
+          "example": "eurex-derivatives"
+        },
+        "comments": {
+          "type": "string",
+          "description": "Business Services Comments",
+          "example": "Foreign Exchange Trading Services"
+        },
+        "services": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Service"
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Relationships"
+          }
+        }            
+      },
+      "xml": {
+        "name": "Services"
+      }
+    },
+    "Relationship": {
+      "type": "object",
+      "properties": {
+        "parent": {
+          "type": "string",
+          "description": "Parent",
+          "example": "parent"
+        },
+        "child": {
+          "type": "string",
+          "description": "Child",
+          "example": "child"
+        }
+      },
+      "xml": {
+        "name": "Relationship"
       }
     },
     "Event": {
