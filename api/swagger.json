@@ -230,7 +230,7 @@
         "relationships": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Relationships"
+            "$ref": "#/definitions/Relationship"
           }
         }            
       },
