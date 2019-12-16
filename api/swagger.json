@@ -190,24 +190,45 @@
     }
   },
   "definitions": {
+    "Microservice": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Microservice Name",
+          "example": "forex-services"
+        },
+        "hostname": {
+          "type": "string",
+          "description": "Microservice FQDN Hostname",
+          "example": "foo.com"
+        }
+      },
+      "xml": {
+        "name": "Microservice"
+      }
+    },
     "Service": {
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "description": "Service Name",
-          "example": "forex-services"
+          "description": "Business Service Name",
+          "example": "eurex-derivatives"
         },
-        "host": {
+        "comments": {
           "type": "string",
-          "description": "Service Host FQDN",
-          "example": "foo.com"
-        }
+          "description": "Business Services Comments",
+          "example": "Foreign Exchange Trading Services"
+        },
+        "service": {
+          "$ref": "#/definitions/Microservice"
+        } 
       },
       "xml": {
-        "name": "Service"
+        "name": "Services"
       }
-    },
+    },    
     "Services": {
       "type": "object",
       "properties": {
@@ -224,7 +245,7 @@
         "services": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Service"
+            "$ref": "#/definitions/Microservice"
           }
         },
         "relationships": {
