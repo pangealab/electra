@@ -202,7 +202,22 @@
           "type": "string",
           "description": "Microservice FQDN Hostname",
           "example": "foo.com"
-        }
+        },
+        "protocol": {
+          "type": "string",
+          "description": "Microservice Protocol",
+          "example": "http"
+        },
+        "port": {
+          "type": "string",
+          "description": "Microservice Port",
+          "example": "80"
+        },
+        "path": {
+          "type": "string",
+          "description": "Microservice Path",
+          "example": "/foo"
+        }        
       },
       "xml": {
         "name": "Microservice"
