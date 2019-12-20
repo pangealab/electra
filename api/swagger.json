@@ -198,26 +198,11 @@
           "description": "Microservice Name",
           "example": "forex-services"
         },
-        "hostname": {
+        "uri": {
           "type": "string",
-          "description": "Microservice FQDN Hostname",
-          "example": "foo.com"
-        },
-        "protocol": {
-          "type": "string",
-          "description": "Microservice Protocol",
-          "example": "http"
-        },
-        "port": {
-          "type": "string",
-          "description": "Microservice Port",
-          "example": "80"
-        },
-        "path": {
-          "type": "string",
-          "description": "Microservice Path",
-          "example": "/foo"
-        }        
+          "description": "Microservice FQDN URI",
+          "example": "http://foo.com"
+        }     
       },
       "xml": {
         "name": "Microservice"
