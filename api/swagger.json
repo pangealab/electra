@@ -45,38 +45,6 @@
     "http"
   ],
   "paths": {
-    "/register/v1/service": {
-      "post": {
-        "tags": [
-          "service"
-        ],
-        "summary": "Register Service",
-        "description": "Register a Service",
-        "operationId": "registerService",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Created Service object",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Service"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "successful operation"
-          }
-        }
-      }
-    },
     "/register/v1/services": {
       "post": {
         "tags": [
