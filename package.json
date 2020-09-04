@@ -1,12 +1,13 @@
 {
   "name": "electra",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "core-js": "^3.6.5",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
