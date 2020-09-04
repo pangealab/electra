@@ -37,7 +37,7 @@ jobs:
         --build-arg IMAGE_CREATE_DATE="`date -u +"%Y-%m-%dT%H:%M:%SZ"`" \
         --build-arg IMAGE_SOURCE_REVISION="`git rev-parse HEAD`" \
         -f Dockerfile \
-        -t "pangealab/electra:latest" app
+        -t "pangealab/electra:latest" .
     
     # Push the Image to Docker Hub
     - name: Push Docker Image to Docker Hub
