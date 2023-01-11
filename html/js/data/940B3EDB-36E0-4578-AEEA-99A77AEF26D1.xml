@@ -1,0 +1,11 @@
+tocTab[tocTab.length] = new Array("0.1.2.2:1", "", "Accounts", "EARoot/EA1/EA2/EA2/EA39.htm", "175.png", "30", "0", "", "Logical diagram0","{5127CF14-8508-4afe-976B-EA3E3120D747}");
+tocTab[tocTab.length] = new Array("0.1.2.2:2", "", "«Resource» Account", "EARoot/EA1/EA2/EA2/EA41.htm", "5.png", "111", "0", "", "Class0","{E486C820-35DA-4493-94DA-288A5D9B98C8}");
+tocTab[tocTab.length] = new Array("0.1.2.2:3", "", "«Resource» Accounts", "EARoot/EA1/EA2/EA2/EA42.htm", "5.png", "112", "0", "", "Class0","{36133997-66E0-40bc-8F65-B530EC7C2329}");
+tocTab[tocTab.length] = new Array("0.1.2.2:4", "", "«Resource» AccountSummary", "EARoot/EA1/EA2/EA2/EA43.htm", "5.png", "113", "0", "", "Class0","{36E5DED1-56B4-4e99-8DFD-63909A59FA2F}");
+tocTab[tocTab.length] = new Array("0.1.2.2:5", "", "AccountType", "EARoot/EA1/EA2/EA2/EA44.htm", "247.png", "119", "0", "", "Enumeration0","{2CB09B9E-381C-41a2-AF64-FAC5CB508C3B}");
+tocTab[tocTab.length] = new Array("0.1.2.2:6", "", "«Resource» CashAccount", "EARoot/EA1/EA2/EA2/EA45.htm", "5.png", "114", "0", "", "Class0","{EB08F8AA-19E1-4e28-8706-8FC14B10B1F5}");
+tocTab[tocTab.length] = new Array("0.1.2.2:7", "", "Currency", "EARoot/EA1/EA2/EA2/EA46.htm", "247.png", "120", "0", "", "Enumeration0","{F75228DE-E1D4-4a17-A5FE-5E47274EB96B}");
+tocTab[tocTab.length] = new Array("0.1.2.2:8", "", "«Resource» Money", "EARoot/EA1/EA2/EA2/EA47.htm", "5.png", "115", "0", "", "Class0","{9EE47064-DC3E-4e9d-A61F-13349B2D97D1}");
+tocTab[tocTab.length] = new Array("0.1.2.2:9", "", "«Resource» Owner", "EARoot/EA1/EA2/EA2/EA48.htm", "5.png", "116", "0", "", "Class0","{9A51E335-160E-4326-8A7F-DB1EDE36CCD0}");
+tocTab[tocTab.length] = new Array("0.1.2.2:10", "", "«Resource» SavingsAccount", "EARoot/EA1/EA2/EA2/EA49.htm", "5.png", "117", "0", "", "Class0","{3558B32F-236D-4cf8-AB8A-6ABB53FBE87C}");
+tocTab[tocTab.length] = new Array("0.1.2.2:11", "", "«Resource» Note", "EARoot/EA1/EA2/EA2/EA50.htm", "5.png", "118", "0", "", "Class0","{23710809-26B8-41c0-B870-8F30CF277707}");
