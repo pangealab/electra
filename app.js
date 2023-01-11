@@ -30,7 +30,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // Swagger Route
-swaggerDocument = require('./api/swagger.json');
+var YAML = require('yamljs');
+var swaggerDocument = YAML.load('./api/accounts.yml');
+// var swaggerDocument = require('./api/swagger.json');
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler
