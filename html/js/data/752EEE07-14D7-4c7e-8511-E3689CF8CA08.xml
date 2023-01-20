@@ -1,3 +1,5 @@
-tocTab[tocTab.length] = new Array("0.3:1", "", "Actors", "EARoot/EA3/EA28.htm", "188.png", "5", "0", "", "Custom diagram0","{74B7D314-45C9-4c3b-8B80-6F8DB78C13DA}");
-tocTab[tocTab.length] = new Array("0.3:2", "", "«Person» Person2", "EARoot/EA3/EA30.htm", "261.png", "32", "0", "", "Class0","{DEFEB465-8C5A-4afc-B0ED-9BAB545B7C49}");
-tocTab[tocTab.length] = new Array("0.3:3", "", "«Person» Person1", "EARoot/EA3/EA31.htm", "261.png", "13", "0", "", "Class0","{4A222F53-66CA-475d-BF92-20E31EE43F29}");
+tocTab[tocTab.length] = new Array("0.3:1", "", "Actors", "EARoot/EA3/EA35.htm", "188.png", "5", "0", "", "Custom diagram0","{74B7D314-45C9-4c3b-8B80-6F8DB78C13DA}");
+tocTab[tocTab.length] = new Array("0.3:2", "", "«Person» 3rd Party", "EARoot/EA3/EA37.htm", "261.png", "32", "0", "", "Class0","{DEFEB465-8C5A-4afc-B0ED-9BAB545B7C49}");
+tocTab[tocTab.length] = new Array("0.3:3", "", "«Person» Anonymous", "EARoot/EA3/EA38.htm", "261.png", "41", "0", "", "Class0","{7615EC34-E9BE-4dbb-AC55-4334E862C9ED}");
+tocTab[tocTab.length] = new Array("0.3:4", "", "«Person» Platform", "EARoot/EA3/EA39.htm", "261.png", "46", "0", "", "Class0","{33882AA8-9818-4e31-A303-2BE7ABFF90C6}");
+tocTab[tocTab.length] = new Array("0.3:5", "", "«Person» External", "EARoot/EA3/EA40.htm", "261.png", "13", "0", "", "Class0","{4A222F53-66CA-475d-BF92-20E31EE43F29}");
