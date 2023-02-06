@@ -50,4 +50,4 @@ jobs:
     # Print App URL    
     - name: Print App URL
       run:
-        echo ${{ steps.get-app-ip.outputs.INGRESS_IP }}
+        echo "${{ env.INGRESS_IP }}
