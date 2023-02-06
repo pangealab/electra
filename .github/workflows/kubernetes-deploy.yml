@@ -50,4 +50,4 @@ jobs:
     # Print App URL    
     - name: Print App URL
       run:
-        echo "Service URL:" http://${{ steps.get-app-url.outputs.result }}:8080/api/docs
+        echo ${{ steps.get-app-url.outputs.result }}
