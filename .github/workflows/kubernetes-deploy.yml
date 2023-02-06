@@ -22,7 +22,7 @@ jobs:
     
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     
@@ -38,16 +38,16 @@ jobs:
       with:
         args: -n electra apply -f yaml/deploy-electra.yml
      
-    # Get App URL
-    - name: Get App URL
-      id: get-app-url
+    # Get App IP
+    - name: Get App IP
+      id: get-app-ip
       uses: actions-hub/kubectl@master
       env:
         KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
       with:
-        args: -n electra get svc/electra-external -o jsonpath='{.status.loadBalancer.ingress[0].ip}') >> $GITHUB_OUTPUT
+        args: -n electra get svc/electra-external -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
         
     # Print App URL    
     - name: Print App URL
       run:
-        echo ${{ steps.get-app-url.outputs.stdout }}
+        echo ${{ steps.get-app-ip.outputs.* }}
