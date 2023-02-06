@@ -39,9 +39,15 @@ jobs:
         args: -n electra apply -f yaml/deploy-electra.yml
      
     # Get App URL
-    - name: Get App URL      
+    - name: Get App URL
+      id: get-app-url
       uses: actions-hub/kubectl@master
       env:
         KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
       with:
-        args: -n electra get svc/electra-external     
+        args: -n electra get svc/electra-external -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+        
+    - name: Print image
+      run:
+        echo "Service URL:" http://${{ steps.get-app-url.outputs.result }}:8080/api/docs
+        
