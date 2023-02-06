@@ -47,7 +47,7 @@ jobs:
       with:
         args: -n electra get svc/electra-external -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
         
-    - name: Print image
+    # Print App URL    
+    - name: Print App URL
       run:
         echo "Service URL:" http://${{ steps.get-app-url.outputs.result }}:8080/api/docs
-        
