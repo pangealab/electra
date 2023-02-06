@@ -29,22 +29,11 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout Git Repo
       uses: actions/checkout@v2
-   
-    # Configure AWS Credentials
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
-        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-        role-duration-seconds: 900
-        role-session-name: github
 
     # Deploy to Kubernetes
-    - name: Deploy to Kubernetes
-      uses: pangealab/kratos@master
+    - name: Deploy to Kubernetes        
+      uses: actions-hub/kubectl@master
       env:
-        KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
       with:
-        args: apply -f yaml/deploy-electra.yaml -n sandbox
+        args: apply -f yaml/deploy-electra.yaml -n electra
